@@ -7,8 +7,8 @@
     <ProjectGuid>{99EE239B-19C5-409F-98FA-9BD356283E40}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Generate</RootNamespace>
-    <AssemblyName>Generate</AssemblyName>
+    <RootNamespace>RCG</RootNamespace>
+    <AssemblyName>RCG</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Generate.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\RCG.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>RCG</id>
+    <version>0.0.1</version>
+    <title>Random String Generator</title>
+    <authors>Adrian Jaspio</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://www.nuget.org/packages/Generate/</projectUrl>
+    <iconUrl>https://www.nuget.org/packages/Generate/</iconUrl>
+    <description>This library provide tools that are used for generating random string</description>
+    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <copyright>2021</copyright>
+    <tags>Tag1 Tag2</tags>
+  </metadata>
+</package>
