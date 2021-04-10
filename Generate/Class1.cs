@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace RandomGen
+namespace AAJGen
 {
     /// <summary>
     /// Author: Adrian A. Jaspio

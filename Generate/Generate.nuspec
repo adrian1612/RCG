@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package >
   <metadata>
-    <id>RCG</id>
+    <id>RandomGen</id>
     <version>0.0.1</version>
     <title>Random String Generator</title>
     <authors>Adrian Jaspio</authors>
