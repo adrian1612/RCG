@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Generate
@@ -15,14 +16,14 @@ namespace Generate
         string sourceA = "abcdefghijklmnopqrstuvwxzy1234567890";
         string sourceB = "ABCDEFGHIJKLMNOPQRSTUVWXZY";
         string sourceC = @"!@#$%^&*(){}:""|<>?~[];',./\`-=+_ñÑ";
-        string finalSource;
+        char[] finalSource;
 
         /// <summary>
         /// Create new instance with default setting.
         /// </summary>
         public RandomGen()
         {
-            finalSource = sourceA;
+            finalSource = sourceA.ToArray();
         }
 
         /// <summary>
@@ -34,13 +35,13 @@ namespace Generate
             switch (opt)
             {
                 case Option.Default:
-                    finalSource = sourceA;
+                    finalSource = sourceA.ToArray();
                     break;
                 case Option.IncludeCapital:
-                    finalSource = sourceA + sourceB;
+                    finalSource = (sourceA + sourceB).ToArray();
                     break;
                 case Option.IncludeCapetalAndSpecial:
-                    finalSource = sourceA + sourceB + sourceC;
+                    finalSource = (sourceA + sourceB + sourceC).ToArray();
                     break;
             }
         }
@@ -53,12 +54,14 @@ namespace Generate
         public string Gen(int length = 6)
         {
             var output = "";
+            Random rnd = new Random();
             for (int i = 0; i < length; i++)
             {
-                output += finalSource[new Random().Next(0, finalSource.Length)];
+                output += finalSource[rnd.Next(0, finalSource.Length)];
             }
             return output;
         }
+
     }
 
     /// <summary>
