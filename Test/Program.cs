@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Generate;
+using AAJGen;
 using System.Threading;
 
 namespace Test
@@ -12,9 +12,10 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            RandomGen rnd = new RandomGen(Option.IncludeCapital);
+            RandomGen rnd = new RandomGen(Option.IncludeCapetalAndSpecial);
             for (int i = 0; i < 10; i++)
             {
+                Thread.Sleep(1);
                 Console.WriteLine(rnd.Gen());
             }
             Console.ReadLine();
