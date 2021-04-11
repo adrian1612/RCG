@@ -12,10 +12,9 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            RandomGen rnd = new RandomGen(Option.IncludeCapetalAndSpecial);
+            RandomGen rnd = new RandomGen(Option.IncludeCapitalAndSpecial);
             for (int i = 0; i < 10; i++)
             {
-                Thread.Sleep(1);
                 Console.WriteLine(rnd.Gen());
             }
             Console.ReadLine();

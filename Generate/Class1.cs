@@ -40,10 +40,21 @@ namespace AAJGen
                 case Option.IncludeCapital:
                     finalSource = (sourceA + sourceB).ToArray();
                     break;
-                case Option.IncludeCapetalAndSpecial:
+                case Option.IncludeCapitalAndSpecial:
                     finalSource = (sourceA + sourceB + sourceC).ToArray();
                     break;
             }
+        }
+
+        Random rnd = new Random();
+        string Create(int length)
+        {
+            string output = "";
+            for (int i = 0; i < length; i++)
+            {
+                output += finalSource[rnd.Next(0, finalSource.Length)];
+            }
+            return output;
         }
 
         /// <summary>
@@ -53,13 +64,7 @@ namespace AAJGen
         /// <returns>string</returns>
         public string Gen(int length = 6)
         {
-            var output = "";
-            Random rnd = new Random();
-            for (int i = 0; i < length; i++)
-            {
-                output += finalSource[rnd.Next(0, finalSource.Length)];
-            }
-            return output;
+            return Create(length);
         }
 
     }
@@ -80,6 +85,6 @@ namespace AAJGen
         /// <summary>
         /// a - z, A - Z, Special Character, and 0 - 9
         /// </summary>
-        IncludeCapetalAndSpecial
+        IncludeCapitalAndSpecial
     }
 }
